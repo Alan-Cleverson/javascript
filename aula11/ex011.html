@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naturalidade</title>
+</head>
+<body>
+    <H1>Sistema de localidade</H1>
+
+    <label for="pais">País onde você mora:</label>
+    <input type="text" name="pais" id="pais" placeholder="1º letra maiuscula">
+    <input type="button" value="confirma" onclick="regiao()">
+    <div id="reg">
+
+    </div>
+    <script>
+        function regiao() {
+            var paise = window.document.querySelector('input#pais')
+            var reg = window.document.querySelector('div#reg')
+            var mora = (paise.value)
+            
+            reg.innerHTML = '<p> Voce mora no ' + mora +' </p>'
+
+            if (mora == 'Brasil') {
+                reg.innerHTML += 'Voce é brasileiro!'
+            } else {
+                reg.innerHTML += 'Voce é estrangeiro!'
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
