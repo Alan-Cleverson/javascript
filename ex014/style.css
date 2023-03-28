@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 678px) {
+    
+}
 body {
     background: rgb(51, 142, 240);
 
@@ -15,7 +18,7 @@ section {
     background: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    width: 300px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.445);
 }
@@ -29,4 +32,10 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+
+@media screen and (min-width: 678px) {
+    section {
+        width: 500px;
+    }
 }

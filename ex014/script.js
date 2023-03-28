@@ -9,7 +9,7 @@ function carregar() {
 
     if (horas >= 0 && horas < 12){
         //Bom dia
-        msg.innerHTML = 'Bom dia, agora são '+ horas +':'+ min 
+        msg.innerHTML = 'Bom dia, agora são <strong>'+ horas +':'+ min +'</strong>'
         img.src = 'manha.png'
         document.body.style.background = '#c0b182'
         } else if (horas >= 12 && horas <= 18){
