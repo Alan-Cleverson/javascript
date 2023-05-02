@@ -8,9 +8,19 @@ function verificar() {
     if (fano.value.length == 0 || fano.value > ano ){
         alert('[ERRO] Vereifique os dados e tente novamente.')
     } else {
-        var fsex = window.document.getElementsByName('radsex')
+        var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
-        res.innerHTML = 'Se ainda não fez, vai fazer: '+ idade
+        var genero = ''
+        if (fsex[0].checked) {
+        genero = 'Homem'
+    } else if (fsex[1].checked) {
+        genero = 'Mulher'
     }
+        res.style.textAlign = 'center'
+        res.innerHTML = 'Detectamos '+ genero + ' com'+ idade +' anos'
+        res.innerHTML = 'Se ainda não completou, vai fazer '+ idade +' anos'
 
+    }
+       
 }
+
